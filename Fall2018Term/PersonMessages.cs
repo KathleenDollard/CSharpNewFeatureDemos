@@ -1,5 +1,5 @@
 ﻿using System;
-using CSharp7Demo;
+using CSharpDemo;
 
 namespace Fall2018Term
 {
@@ -8,7 +8,7 @@ namespace Fall2018Term
         private PersonMessageRole(Person value) : base(value) { }
 
         public string Opening
-            => Underlying.Name;
+            => Underlying.FirstName;
         public string ThankYouMessage
         {
             get
@@ -16,7 +16,7 @@ namespace Fall2018Term
                 switch (Underlying)
                 {
                     case Student student when (student.GPA > 3.2m):
-                        return $"Thanks {student.Name} for being  an honor student this term, sorry about the flood";
+                        return $"Thanks {student.FirstName} for being  an honor student this term, sorry about the flood";
                     case Student student2:
                         return "Thanks for being a student this term";
                     case Instructor instructor:

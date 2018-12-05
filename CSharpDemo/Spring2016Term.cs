@@ -1,7 +1,7 @@
 ﻿//using System;
 //using System.Collections.Generic;
 
-//namespace CSharp7Demo
+//namespace CSharpDemo
 //{
 //    public class Spring2016TermMessaging
 //    {

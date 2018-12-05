@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSharp7Demo
+namespace CSharpDemo
 {
     [Flags]
     public enum StaffRole

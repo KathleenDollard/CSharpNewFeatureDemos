@@ -1,4 +1,0 @@
-﻿namespace CSharp7Demo
-{
-  
-}

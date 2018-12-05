@@ -1,32 +1,45 @@
-﻿namespace CSharp7Demo
+﻿using System;
+using System.Collections.Generic;
+
+namespace CSharpDemo
 {
     public class Person
     {
-        public Person(string name) => Name = name;
-        public string Name { get; }
+        public Person(string firstName, string middleName, string lastName)
+        {
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
+        }
+
+        public string FirstName { get; }
+        public object MiddleName { get; }
+        public object LastName { get; }
     }
 
     public class Student : Person
     {
-        public Student(string name, decimal gpa) : base(name) => GPA = gpa;
+        public Student(string firstName, string middleName, string lastName, decimal gpa) 
+            : base(firstName, middleName, lastName) => GPA = gpa;
         public decimal GPA { get; }
     }
 
     public class Staff : Person
     {
-        public Staff(string name, StaffRole staffRole, decimal salary) : base(name)
+        public Staff(string firstName, string middleName, string lastName, StaffRole staffRole, DateTime hireDate)
+            : base(firstName, middleName, lastName)
         {
             StaffRole = staffRole;
-            Salary = salary;
+            HireDate = hireDate;
         }
         public StaffRole StaffRole { get; }
-        public decimal Salary { get; }
+        public DateTime HireDate { get; }
     }
 
     public class Instructor : Staff
     {
-        public Instructor(string name, decimal salary, IEnumerable<string> courses)
-            : base(name, StaffRole.Instructor, salary) => Courses = courses;
+        public Instructor(string firstName, string middleName, string lastName, DateTime hireDate, IEnumerable<string> courses)
+            : base(firstName, middleName, lastName, StaffRole.Instructor, hireDate) => Courses = courses;
 
         public IEnumerable<string> Courses { get; private set; }
     }

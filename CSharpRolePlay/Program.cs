@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Fall2018Term;
 
-namespace CSharp7Demo
+namespace CSharpDemo
 {
     class Program
     {
@@ -19,8 +19,7 @@ namespace CSharp7Demo
 
         private static IDictionary<Int32, Person> GetData()
         {
-            ISeedData<Person> seedData = new SeedDataForPerson();
-            return seedData.GetData();
+            return new SeedDataForPerson().GetData();
         }
     }
 }
