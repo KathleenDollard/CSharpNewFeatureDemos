@@ -1,13 +1,15 @@
-C#6 -> 7
-1) C# 6 Fix with Elvis operator (Program.cs, 19)
-2) Clean up Person.cs
-3) Fix all the squiggles in Program.cs
-4) Term...GetThankYouMessage - squiggles for pattern matching
-5) Switch to switch :)
-6) Improve Student with When (One Screen!!!)
-7) GetThankYouMessages - Pattern Matching for StaffCount
-7) Changes to tuple return, remove out
-8) Fix Program.cs to call
+# C#6 -> 7.3
+1) (7.1) Language selection
+1) (7.1) default literal (Program.cs,Test method)
+1) (7.0) C# 6 Fix with Elvis operator (Program.cs,Test method)
+1) (7.0) Clean up Person.cs (Move classes into own files)
+1) (7.0) Fix all the squiggles in Program.cs
+1) (7.0) Term...GetThankYouMessage - squiggles for pattern matching
+1) (7.0) Switch to switch :)
+1) (7.0) Improve Student with When (One Screen!!!)
+1) (7.0) GetThankYouMessages - Pattern Matching for StaffCount
+1) (7.0) Changes to tuple return, remove out
+1) (7.0) Fix Program.cs to call
 
 
 C#7 Updates

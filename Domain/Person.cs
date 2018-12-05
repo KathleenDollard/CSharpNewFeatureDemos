@@ -15,11 +15,15 @@ namespace CSharpDemo
         public string FirstName { get; }
         public string MiddleName { get; }
         public string LastName { get; }
+
+        public string FullName
+            => FirstName + " " + LastName;
+
     }
 
     public class Student : Person
     {
-        public Student(string firstName, string middleName, string lastName, decimal gpa) 
+        public Student(string firstName, string middleName, string lastName, decimal gpa)
             : base(firstName, middleName, lastName) => GPA = gpa;
         public decimal GPA { get; }
     }

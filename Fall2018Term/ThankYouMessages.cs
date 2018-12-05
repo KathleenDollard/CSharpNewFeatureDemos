@@ -26,9 +26,6 @@ namespace CSharpDemo.Fall2018Term
             return messages;
         }
 
-        private string FullName(Student student)
-            => student.FirstName + student.MiddleName[0] + "." + student.LastName;
-
         private string GetThankYouMessage(Person person)
         {
             var student = person as Student;
@@ -38,11 +35,11 @@ namespace CSharpDemo.Fall2018Term
                 {
                     return String.Format(
                         "Dear {0}, Thanks for being  an honor student this term. Have a good break.",
-                        FullName(student));
+                       student.FullName);
                 }
                 else
                 {
-                    return String.Format("Thanks {0} for being a student this term. Are you coming back?", 
+                    return String.Format("Thanks {0} for being a student this term. Are you coming back?",
                         student.FirstName);
                 }
             }

@@ -4,6 +4,7 @@
 using CSharpDemo.Fall2018Term;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CSharpDemo
 {
@@ -11,6 +12,7 @@ namespace CSharpDemo
     {
         static void Main(string[] args)
         {
+            Test();
             IDictionary<int, Person> persons = GetData();
             var term = new Fall2018Messaging();
             var staffCount = 0;
@@ -20,6 +22,12 @@ namespace CSharpDemo
             Console.WriteLine($"Staff count: {staffCount}");
             Console.Write(string.Join("\n", thankYouMessages));
             Console.Read();
+        }
+
+        private static void Test()
+        {
+            Person person = default(Person);
+            var middleInitial = person.MiddleName.First();
         }
 
         private static IDictionary<Int32, Person> GetData()
