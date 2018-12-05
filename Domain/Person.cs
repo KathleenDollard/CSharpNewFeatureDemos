@@ -13,8 +13,8 @@ namespace CSharpDemo
         }
 
         public string FirstName { get; }
-        public object MiddleName { get; }
-        public object LastName { get; }
+        public string MiddleName { get; }
+        public string LastName { get; }
     }
 
     public class Student : Person
