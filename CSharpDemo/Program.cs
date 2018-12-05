@@ -39,6 +39,17 @@ namespace CSharpDemo
         {
             return persons[id];
         }
+
+        private static void ShowNullPatternMatch()
+        {
+            string s = null;
+            if (s is string str)
+            { Console.WriteLine("s is string"); }
+            else
+            { Console.WriteLine("null is not a string"); }
+
+
+        }
     }
 }
 

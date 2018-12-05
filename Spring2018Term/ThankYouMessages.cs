@@ -20,9 +20,6 @@ namespace CSharpDemo.Spring2018Term
                 if (staff != null)
                 { staffCount += 1; }
 
-                if (person is Staff staff1)
-                { staffCount += 1; }
-
                 messages.Add(message);
             }
             return messages;
