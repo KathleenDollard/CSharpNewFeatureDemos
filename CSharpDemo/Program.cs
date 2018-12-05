@@ -1,10 +1,9 @@
-﻿//using System;
-//using System.Collections.Generic;
-
-using CSharpDemo.Fall2018Term;
+﻿using CSharpDemo.Fall2018Term;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+//#nullable enable
 
 namespace CSharpDemo
 {
@@ -13,11 +12,11 @@ namespace CSharpDemo
         static void Main(string[] args)
         {
             Test();
-            IDictionary<int, Person> persons = GetData();
+            IEnumerable<Person> persons = GetData();
             var term = new Fall2018Messaging();
             var staffCount = 0;
             IEnumerable<string> thankYouMessages = term.GetThankYouMessages(
-                    persons.Values, out staffCount);
+                    persons, out staffCount);
 
             Console.WriteLine($"Staff count: {staffCount}");
             Console.Write(string.Join("\n", thankYouMessages));
@@ -30,9 +29,9 @@ namespace CSharpDemo
             var middleInitial = person.MiddleName.First();
         }
 
-        private static IDictionary<Int32, Person> GetData()
+        private static IEnumerable<Person> GetData()
         {
-            return new SeedDataForPerson().GetData();
+            return SeedDataForPerson.GetData();
         }
 
         private static Person GetPerson(

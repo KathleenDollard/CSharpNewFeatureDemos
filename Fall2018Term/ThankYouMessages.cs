@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//#nullable enable
+
 namespace CSharpDemo.Fall2018Term
 {
     public class Fall2018Messaging

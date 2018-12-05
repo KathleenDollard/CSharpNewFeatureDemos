@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//#nullable enable
+
 namespace CSharpDemo.Spring2018Term
 {
     public class Spring2018Messaging
