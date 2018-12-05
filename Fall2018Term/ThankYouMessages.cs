@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CSharpDemo
+namespace CSharpDemo.Fall2018Term
 {
-    public class Spring2018TermMessages
+    public class Fall2018Messaging
     {
         public IEnumerable<string> GetThankYouMessages(IEnumerable<Person> persons,
                                                        out int staffCount)
@@ -37,21 +37,24 @@ namespace CSharpDemo
                 if (student.GPA > 3.2m)
                 {
                     return String.Format(
-                        "Dear {0},\r\n for being  an honor student this term, sorry about the flood",
+                        "Dear {0}, Thanks for being  an honor student this term. Have a good break.",
                         FullName(student));
                 }
                 else
-                { return "Thanks for being a student this term, sorry about the flood"; }
+                {
+                    return String.Format("Thanks {0} for being a student this term. Are you coming back?", 
+                        student.FirstName);
+                }
             }
             var instructor = person as Instructor;
             if (instructor != null)
             {
-                return $"Thanks for teaching {string.Join(", ", instructor.Courses)}";
+                return $"Thanks {instructor.FirstName} for teaching {string.Join(", ", instructor.Courses)}";
             }
             var staff = person as Staff;
             if (staff != null)
             {
-                return $"Thanks for being a {staff.StaffRole.ToString()}";
+                return $"Thanks {staff.FirstName} for being a {staff.StaffRole.ToString()}";
             }
             throw new InvalidOperationException();
         }

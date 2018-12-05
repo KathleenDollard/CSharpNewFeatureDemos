@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Fall2018Term\Fall2018Term.csproj" />
+    <ProjectReference Include="..\Spring2018Term\Spring2018Term.csproj" />
   </ItemGroup>
 
 </Project>
