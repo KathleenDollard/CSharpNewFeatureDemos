@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-//#nullable enable
+#nullable enable
 
 namespace CSharpDemo
 {
@@ -21,12 +21,13 @@ namespace CSharpDemo
             return list;
         }
 
-        public static IEnumerable<Person> GetDataIterator()
+        public static async IAsyncEnumerable<Person> GetDataIteratorAsync()
         {
             try
             {
                 foreach (Person person in GetData())
                 {
+                    await Task.Delay(1000);
                     yield return person;
                 }
             }
